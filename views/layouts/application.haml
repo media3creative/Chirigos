@@ -1,0 +1,145 @@
+- @sitename
+
+
+!!! 5
+%html{html_attrs}
+  %head
+    %title= @title
+    // Buggy on the iPhone4
+    // %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}
+    %link{:href => "stylesheets/stylesheet.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "stylesheets/lightbox.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
+    %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-1.5.min.js"}
+    //%script{:type => "text/javascript", :src => "javascripts/respond.min.js"}
+    //%script{:type => "text/javascript", :src => "javascripts/application.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.color.js"}
+    %script{:type => "text/javascript", :src => "javascripts/menu-control.js"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+  %body{:onorientationchange =>"ipadFunc();"}
+  .bg2
+  .bg1
+  .header
+    .logo
+    .menu-container
+      %ul.menu
+        %li
+          %a{:href => "#", :id => "main-1-link"} HOME
+          .menu-hl
+        %li
+          %a{:href => "#", :id => "main-2-link"} ABOUT
+          .menu-hl
+        %li
+          %a{:href => "#", :id => "main-3-link"} SERVICES
+          .menu-hl
+        %li
+          %a{:href => "#", :id => "main-4-link"} GALLERY
+          .menu-hl
+        %li
+          %a{:href => "#", :id => "main-5-link"} CONTACT
+          .menu-hl
+  .content-container#page1
+    #page-1-content-bg
+    #page-1-content
+      %ul.submenu
+        %li.brown#sub-1-link
+          %a{:href => "#"} design
+        %li.red#sub-2-link 
+          %a{:href => "#"} material
+        %li.white#sub-3-link
+          %a{:href => "#"} the designer
+        %li.yellow#sub-4-link
+          %a{:href => "#"} more
+      .content-type-1#page1-sub1
+        .content-type-1-part-1
+          %h1 the Designs
+          %h2 Parts of corporate identity
+          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
+          %p Corporate design (logos, uniforms)
+          %p Corporate communications (advertisements, public relations, information, commercials)
+          %p Corporate behavior (internal values, norms)
+        .content-type-1-part-2
+          %br
+          %br
+          %br
+          %br
+          %p.note
+            %b corporate
+            identity 
+            %b blue 
+            | $1800
+      .content-type-1#page1-sub2
+        .content-type-1-part-1
+          %h1 Materials
+          %h2 Parts of corporate identity
+          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
+          %p Corporate design (logos, uniforms)
+          %p Corporate communications (advertisements, public relations, information, commercials)
+          %p Corporate behavior (internal values, norms)
+        .content-type-1-part-2
+          %br
+          %br
+          %br
+          %br
+          %p.note
+            %b corporate
+            identity 
+            %b blue 
+            | $1800
+      .content-type-1#page1-sub3
+        .content-type-1-part-1
+          %h1 our Designers
+          %h2 Parts of corporate identity
+          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
+          %p Corporate design (logos, uniforms)
+          %p Corporate communications (advertisements, public relations, information, commercials)
+          %p Corporate behavior (internal values, norms)
+        .content-type-1-part-2
+          %br
+          %br
+          %br
+          %br
+          %p.note
+            %b corporate
+            identity 
+            %b blue 
+            | $1800
+      .content-type-1#page1-sub4
+        .content-type-1-part-1
+          %h1 More
+          %h2 Parts of corporate identity
+          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
+          %p Corporate design (logos, uniforms)
+          %p Corporate communications (advertisements, public relations, information, commercials)
+          %p Corporate behavior (internal values, norms)
+        .content-type-1-part-2
+          %br
+          %br
+          %br
+          %br
+          %p.note
+            %b corporate
+            identity 
+            %b blue 
+            | $1800
+  .content-container#page2
+    .content-text#page-2-content
+  .content-container#page3
+    .content-text#page-3-content
+  .content-container#page4
+    .content-text#page-4-content
+  .content-container#page5
+    .content-text#page-5-content
+  .content-container#page6
+    .content-text#page-6-content
+  .upper-footer
+    All contents &copy; copyright 2010 - 2011  Chirigos Designs, Inc. All rights reserved     |    Terms & conditions    |    Privacy policy    |    Terms of use     
+  .footer
+    .footer-right
+      %form#form1{:action => "", :method => "post", :name => "form1"}
+        Sign up for our newsletter    |      Name:
+        %input{:name => "text", :type => "text"}
+        Email:
+        %input{:name => "text", :type => "text"}
+        %input{:name => "submit", :type => "button", :value => "Submit"}
+    .footer-left
+      Powered by: media3creative.com
