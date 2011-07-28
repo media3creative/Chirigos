@@ -95,12 +95,12 @@ $(document).ready(function() {
 	);
 	$('#main-1-link').click(function(){
 		changePage("#page1");
-		switchBg("bg1.jpg");
+		switchBg("bg8.jpg");
 	});
 	
 	$('#main-2-link').click(function(){
 		changePage("#page2");
-		switchBg("bg3.jpg");
+		switchBg("bg6.jpg");
 		// pageComeOut();
 	});
 	$('#main-3-link').click(function(){
