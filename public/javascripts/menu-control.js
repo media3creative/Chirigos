@@ -95,7 +95,7 @@ $(document).ready(function() {
 	);
 	$('#main-1-link').click(function(){
 		changePage("#page1");
-		switchBg("bg8.jpg");
+		switchBg("bg1.jpg");
 	});
 	
 	$('#main-2-link').click(function(){
