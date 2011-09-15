@@ -123,7 +123,7 @@ $(document).ready(function() {
 		switchBg("contact_bg.jpg");
 		// pageComeOut();
 	});
-	setInterval(slideShow,9000);
+	//setInterval(slideShow,9000);
 
 });
 function toggleSubPage(input){
