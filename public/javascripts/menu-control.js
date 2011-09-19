@@ -1,8 +1,8 @@
 var whichPic = 1;
 var currentPage = "#page2"
 var currentSubPage = "#page1-sub1"
-var bg_1_pic = "bg1.jpg"
-var bg_2_pic = "bg1.jpg"
+var bg_1_pic = "1.jpg"
+var bg_2_pic = "1.jpg"
 var agent=navigator.userAgent.toLowerCase();
 var is_iphone = ((agent.indexOf('iphone') != -1));
 var is_ipad = ((agent.indexOf('ipad') != -1));
@@ -95,32 +95,32 @@ $(document).ready(function() {
 	);
 	$('#main-1-link').click(function(){
 		changePage("#page1");
-		switchBg("bg1.jpg");
+		switchBg("1.jpg");
 	});
 	
 	$('#main-2-link').click(function(){
 		changePage("#page2");
-		switchBg("bg6.jpg");
+		switchBg("6.jpg");
 		// pageComeOut();
 	});
 	$('#main-3-link').click(function(){
 		changePage("#page3");
-		switchBg("bg4.jpg");
+		switchBg("4.jpg");
 		// pageComeOut();
 	});
 	$('#main-4-link').click(function(){
 		changePage("#page4");
-		switchBg("bg5.jpg");
+		switchBg("5.jpg");
 		// pageComeOut();
 	});
 	$('#main-5-link').click(function(){
 		changePage("#page5");
-		switchBg("bg2.jpg");
+		switchBg("2.jpg");
 		// pageComeOut();
 	});
 	$('#main-6-link').click(function(){
 		changePage("#page6");
-		switchBg("contact_bg.jpg");
+		switchBg("6.jpg");
 		// pageComeOut();
 	});
 	//setInterval(slideShow,9000);
@@ -190,19 +190,19 @@ function slideShow(){
 	if(currentPage == "#page1"){
 		whichPic += 1;
 		if(whichPic == 1){
-			switchBg("bg1.jpg");
+			switchBg("1.jpg");
 		}
 		if(whichPic == 2){
-			switchBg("bg2.jpg");
+			switchBg("2.jpg");
 		}
 		if(whichPic == 3){
-			switchBg("bg3.jpg");
+			switchBg("3.jpg");
 		}
 		if(whichPic == 4){
-			switchBg("bg4.jpg");
+			switchBg("4.jpg");
 		}
 		if(whichPic == 5){
-			switchBg("bg5.jpg");
+			switchBg("5.jpg");
 			whichPic = 0;
 		}
 	}
@@ -211,9 +211,9 @@ function slideShow(){
 function switchBg(whichBg){
 
 	$(".bg2").css("display","block");
-	$(".bg2").css("background-image","url(/images/"+ bg_1_pic + ")");
+	$(".bg2").css("background-image","url(/images/bg/"+ bg_1_pic + ")");
 	$(".bg1").css("display","none");
-	$(".bg1").css("background-image","url(/images/"+ whichBg + ")");
+	$(".bg1").css("background-image","url(/images/bg/"+ whichBg + ")");
 	
 	$(".bg2").fadeOut(1500);
 	$(".bg1").fadeIn(1500);
