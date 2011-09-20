@@ -28,7 +28,7 @@ $(document).ready(function() {
 		//alert($(this).attr("id") != '#main-6-link');
 		if($(this).attr("id") != 'main-7-link'){
 				$(this).next().animate(
-					{"margin-top":"-80px","background-color":"white","opacity":"0.9"},
+					{"margin-top":"-80px","background-color":"black","opacity":"0.9"},
 					{duration: 250
 					,ease: "swing"
 					,queue: false}
@@ -47,7 +47,7 @@ $(document).ready(function() {
 	$('#main-1-link,#main-2-link,#main-3-link,#main-4-link,#main-5-link,#main-6-link').mouseleave(
 	  function () {
 				$(this).next().animate(
-					{"margin-top":"-200px", "background-color":"black", "opacity":"0"},
+					{"margin-top":"-200px", "background-color":"white", "opacity":"0"},
 					{duration: 650
 					,ease: "linear"
 					,queue: true}
