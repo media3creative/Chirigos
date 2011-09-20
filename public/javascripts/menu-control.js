@@ -1,8 +1,8 @@
 var whichPic = 1;
 var currentPage = "#page2"
 var currentSubPage = "#page1-sub1"
-var bg_1_pic = "1.jpg"
-var bg_2_pic = "1.jpg"
+var bg_1_pic = "7.jpg"
+var bg_2_pic = "7.jpg"
 var agent=navigator.userAgent.toLowerCase();
 var is_iphone = ((agent.indexOf('iphone') != -1));
 var is_ipad = ((agent.indexOf('ipad') != -1));
@@ -95,32 +95,32 @@ $(document).ready(function() {
 	);
 	$('#main-1-link').click(function(){
 		changePage("#page1");
-		switchBg("1.jpg");
+		//switchBg("7.jpg");
 	});
 	
 	$('#main-2-link').click(function(){
 		changePage("#page2");
-		switchBg("6.jpg");
+		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	$('#main-3-link').click(function(){
 		changePage("#page3");
-		switchBg("4.jpg");
+		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	$('#main-4-link').click(function(){
 		changePage("#page4");
-		switchBg("5.jpg");
+		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	$('#main-5-link').click(function(){
 		changePage("#page5");
-		switchBg("2.jpg");
+		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	$('#main-6-link').click(function(){
 		changePage("#page6");
-		switchBg("6.jpg");
+		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	//setInterval(slideShow,9000);
@@ -162,15 +162,15 @@ $(window).resize(function() {
  	var middlePoint = (parseInt($("body").css("width"))/2) - (parseInt($(currentPage).css("width"))/2) + 30 + "px"
 	var inPoint = "0px"
 	//alert("tutu")
-	$(currentPage).css("left",inPoint)
+	$(currentPage).css("left",middlePoint)
 	$(".content-container").css("height",$(".bod"))
 });
 
 //===============
 
 function changePage(targetPage){
-	//var inPoint = (parseInt($("body").css("width"))/2) - (parseInt($(targetPage).css("width"))/2) + 30 + "px"
-	var inPoint = "0px"
+	var inPoint = (parseInt($("body").css("width"))/2) - (parseInt($(targetPage).css("width"))/2) + 30 + "px"
+	//var inPoint = "0px"
 	var outPoint2 =  (0 - parseInt($(targetPage).css("width"))) + "px"
 	var outPoint =  (parseInt($("body").css("width")) + parseInt($(targetPage).css("width"))) + "px"
 	//alert(inPoint);
@@ -190,19 +190,19 @@ function slideShow(){
 	if(currentPage == "#page1"){
 		whichPic += 1;
 		if(whichPic == 1){
-			switchBg("1.jpg");
+			switchBg("7.jpg");
 		}
 		if(whichPic == 2){
-			switchBg("2.jpg");
+			switchBg("7.jpg");
 		}
 		if(whichPic == 3){
-			switchBg("3.jpg");
+			switchBg("7.jpg");
 		}
 		if(whichPic == 4){
-			switchBg("4.jpg");
+			switchBg("7.jpg");
 		}
 		if(whichPic == 5){
-			switchBg("5.jpg");
+			switchBg("7.jpg");
 			whichPic = 0;
 		}
 	}
