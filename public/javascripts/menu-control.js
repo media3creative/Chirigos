@@ -1,6 +1,6 @@
 var whichPic = 1;
 var currentPage = "#page2"
-var currentSubPage = "#page1-sub1"
+var currentSubPage = "#page2-sub1-page"
 var bg_1_pic = "7.jpg"
 var bg_2_pic = "7.jpg"
 var agent=navigator.userAgent.toLowerCase();
@@ -8,12 +8,44 @@ var is_iphone = ((agent.indexOf('iphone') != -1));
 var is_ipad = ((agent.indexOf('ipad') != -1));
 var is_safari = ((agent.indexOf('safari') != -1));
 
-
 $(document).ready(function() {
+  $('%ul.submenu li').click(
+	  function () {
+			toggleSubPage(this)
+	  }
+	);
+  $('#slider').nivoSlider(
+    {
+  						effect:'boxRainGrow', // Specify sets like: 'fold,fade,sliceDown'
+  		        slices:15, // For slice animations
+  		        boxCols: 8, // For box animations
+  		        boxRows: 6, // For box animations
+  		        animSpeed:200, // Slide transition speed
+  		        pauseTime:4000, // How long each slide will show
+  		        startSlide:0, // Set starting Slide (0 index)
+  		        directionNav:false, // Next & Prev navigation
+  		        directionNavHide:false, // Only show on hover
+  		        controlNav:false, // 1,2,3... navigation
+  		        controlNavThumbs:false, // Use thumbnails for Control Nav
+  		        controlNavThumbsFromRel:false, // Use image rel for thumbs
+  		        controlNavThumbsSearch: '.jpg', // Replace this with...
+  		        controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+  		        keyboardNav:false, // Use left & right arrows
+  		        pauseOnHover:false, // Stop animation while hovering
+  		        manualAdvance:false, // Force manual transitions
+  		        captionOpacity:0.8, // Universal caption opacity
+  		        prevText: 'Prev', // Prev directionNav text
+  		        nextText: 'Next', // Next directionNav text
+  		        beforeChange: function(){}, // Triggers before a slide transition
+  		        afterChange: function(){}, // Triggers after a slide transition
+  		        slideshowEnd: function(){}, // Triggers after all slides have been shown
+  		        lastSlide: function(){}, // Triggers when last slide is shown
+  		        afterLoad: function(){} // Triggers when slider has loaded
+  		}
+  );
 	//document.body.style.display = 'block';
-	$("#page1-sub2").fadeToggle();
-	$("#page1-sub3").fadeToggle();
-	$("#page1-sub4").fadeToggle();
+	$(".content-type-1").css("display","none")
+  $("#page2-sub1-page").css("display","block")
 	changePage("#page1")
 	$(".bg2").css("display", "none");
 	$("body").css("overflow-x", "hidden");
@@ -55,7 +87,7 @@ $(document).ready(function() {
 	  }
 	);
 	//=====MOUSE ENTER MENU ITEM==============
-	$('#sub-1-link,#sub-2-link,#sub-3-link,#sub-4-link').hover(
+	$('%ul.submenu li').hover(
 	  function () {
 	    	$(this).animate(
 							{"width":"300px"},
@@ -73,53 +105,39 @@ $(document).ready(function() {
 						);
 	  }
 	);
-	$('#sub-1-link').click(
-	  function () {
-			toggleSubPage('#page1-sub1')
-	  }
-	);
-	$('#sub-2-link').click(
-	  function () {
-			toggleSubPage('#page1-sub2')
-	  }
-	);
-	$('#sub-3-link').click(
-	  function () {
-			toggleSubPage('#page1-sub3')
-	  }
-	);
-	$('#sub-4-link').click(
-	  function () {
-			toggleSubPage('#page1-sub4')
-	  }
-	);
 	$('#main-1-link').click(function(){
 		changePage("#page1");
+		toggleSubPage($("#page1-sub1"));
 		//switchBg("7.jpg");
 	});
 	
 	$('#main-2-link').click(function(){
 		changePage("#page2");
+		toggleSubPage($("#page2-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	$('#main-3-link').click(function(){
 		changePage("#page3");
+		toggleSubPage($("#page3-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	$('#main-4-link').click(function(){
 		changePage("#page4");
+		toggleSubPage($("#page4-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	$('#main-5-link').click(function(){
 		changePage("#page5");
+		toggleSubPage($("#page5-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	$('#main-6-link').click(function(){
 		changePage("#page6");
+		toggleSubPage($("#page6-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
@@ -127,10 +145,11 @@ $(document).ready(function() {
 
 });
 function toggleSubPage(input){
-	if($(input).css("display") == "none"){
-		$(input).fadeToggle();
+	var target = "#"+ $(input).attr("id") + "-page"
+	if($(target).css("display") == "none"){
+		$(target).fadeToggle();
 		$(currentSubPage).fadeToggle();
-		currentSubPage = input
+		currentSubPage = target
 	}
 }
 function ipadFunc(){

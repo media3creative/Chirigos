@@ -9,9 +9,9 @@
     // %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}
     %link{:href => "stylesheets/stylesheet.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "stylesheets/lightbox.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "stylesheets/nivo-slider.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
     %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-1.5.min.js"}
-    //%script{:type => "text/javascript", :src => "javascripts/respond.min.js"}
-    //%script{:type => "text/javascript", :src => "javascripts/application.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.nivo.slider.pack.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.color.js"}
     %script{:type => "text/javascript", :src => "javascripts/menu-control.js"}
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
@@ -35,153 +35,74 @@
           %a{:href => "#", :id => "main-4-link"} GALLERY
           .menu-hl
         %li
+          %a{:href => "#", :id => "main-6-link"} E-DECO
+          .menu-hl
+        %li
           %a{:href => "#", :id => "main-5-link"} CONTACT
           .menu-hl
   .content-container#page1
     .slideshow
+      .slider-wrapper.theme-default
+        .ribbon
+        #slider.nivoSlider
+          %img{:alt => "", :src => "images/slideshow/1.jpg", :title => "Creating Spaces that are nourishing to one's soul and beautiful to one's eye."}
+          %img{:alt => "", :src => "images/slideshow/2.jpg", :title => "Don't wait for 'the right time' to design. Life isn't in the future, it is in this moment. Our true gift is 'the present'."}
+          %img{:alt => "", :src => "images/slideshow/3.jpg", :title => "A home should be about living life, unabbreviated."}
+          %img{:alt => "", :src => "images/slideshow/4.jpg", :title => "True design is about life plus style; your life, your style."}
+          %img{:alt => "", :src => "images/slideshow/5.jpg", :title => "Affordable Style is not an oxymoron."}
+
       //%img{:src => "/images/slideshow/1.png", :width => "800", :height => "533"}
-    #page-1-content-bg
-    #page-1-content
-      %ul.submenu
-        %li.brown#sub-1-link
-          %a{:href => "#"} design
-        %li.red#sub-2-link 
-          %a{:href => "#"} material
-        %li.white#sub-3-link
-          %a{:href => "#"} the designer
-        %li.yellow#sub-4-link
-          %a{:href => "#"} more
-      .content-type-1#page1-sub1
-        .content-type-1-part-1
-          %h1 the Designs
-          %h2 Parts of corporate identity
-          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
-          %p Corporate design (logos, uniforms)
-          %p Corporate communications (advertisements, public relations, information, commercials)
-          %p Corporate behavior (internal values, norms)
-        .content-type-1-part-2
-          %br
-          %br
-          %br
-          %br
-          %p.note
-            %b corporate
-            identity 
-            %b blue 
-      .content-type-1#page1-sub2
-        .content-type-1-part-1
-          %h1 Materials
-          %h2 Parts of corporate identity
-          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
-          %p Corporate design (logos, uniforms)
-          %p Corporate communications (advertisements, public relations, information, commercials)
-          %p Corporate behavior (internal values, norms)
-        .content-type-1-part-2
-          %br
-          %br
-          %br
-          %br
-          %p.note
-            %b corporate
-            identity 
-            %b blue 
-            | $1800
-      .content-type-1#page1-sub3
-        .content-type-1-part-1
-          %h1 our Designers
-          %h2 Parts of corporate identity
-          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
-          %p Corporate design (logos, uniforms)
-          %p Corporate communications (advertisements, public relations, information, commercials)
-          %p Corporate behavior (internal values, norms)
-        .content-type-1-part-2
-          %br
-          %br
-          %br
-          %br
-          %p.note
-            %b corporate
-            identity 
-            %b blue 
-            | $1800
-      .content-type-1#page1-sub4
-        .content-type-1-part-1
-          %h1 More
-          %h2 Parts of corporate identity
-          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
-          %p Corporate design (logos, uniforms)
-          %p Corporate communications (advertisements, public relations, information, commercials)
-          %p Corporate behavior (internal values, norms)
-        .content-type-1-part-2
-          %br
-          %br
-          %br
-          %br
-          %p.note
-            %b corporate
-            identity 
-            %b blue 
-            | $1800
+    .content-bg
   .content-container#page2
-    #page-1-content-bg
-    #page-1-content
+    .content-bg{:style => "height: 1000px"}
+    .slideshow
+      %img{:alt => "", :src => "images/chirigos.jpg", :width => "800", :height => "533"}
+    .content{:style => "margin-top: 20px;"}
       %ul.submenu
-        %li.brown#sub-1-link
-          %a{:href => "#"} design
-        %li.red#sub-2-link 
-          %a{:href => "#"} material
-        %li.white#sub-3-link
-          %a{:href => "#"} the designer
-        %li.yellow#sub-4-link
-          %a{:href => "#"} more
-      .content-type-1#page1-sub1
+        %li.yellow#page2-sub1
+          %a{:href => "#"} mission
+        %li.white#page2-sub2 
+          %a{:href => "#"} biography
+      .content-type-1#page2-sub1-page
         .content-type-1-part-1
-          %h1 the Designs
-          %h2 Parts of corporate identity
-          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
-          %p Corporate design (logos, uniforms)
-          %p Corporate communications (advertisements, public relations, information, commercials)
-          %p Corporate behavior (internal values, norms)
-        .content-type-1-part-2
-          %br
-          %br
-          %br
-          %br
-          %p.note
-            %b corporate
-            identity 
-            %b blue 
-            | $1800
+          %h1 Mission
+          %h2 "True design is about life plus style; your life, your style" 
+          %p True design is about life+style; your life, your style.  My inspiration comes from the uniqueness of each client's life and their style.  I believe that the design should be an extension, unabbreviated, of the lives of everyone living in the home. And because the quality of my client’s life can drastically improve with their environment, it is my passion to create a home that is nourishing to their soul and beautiful to their eye.
+          %p I encourage people to live their lives in the present.  I come across many people that hold back on designing their homes because they are afraid to make the wrong decision, or perhaps they are waiting for 'just the right time'. But life is right now, this moment! Our true gift is 'the present'.
+          %p And no matter where you are in your life, no matter what your budget, there is a way to bring beauty and balance to your home. This is what excites me each time I step into a new client's home... the vision of their home being the nourishing and inspiring place they desire. 
+          %h2{:style => "float: right;margin-right: 20px;"} Bridget
+      .content-type-1#page2-sub2-page
+        .content-type-1-part-1
+          %h1 Biography 
+          %h2 "Affordable Style is not an oxymoron"
+          %p Bridget's passion for home furnishings began in New York in 1990 while studying at F.I.T. and working for an up and coming fashion designer on Seventh Avenue. She was introduced by a professor to the beautiful world of home furnishings and interior design. It was an immediate fascination with how, even the smallest item in a home, can impact the way we live. She changed her major from fashion and earned a degree in Home Furnishings Product Development. 
+          %p Since then her passion for creating beautiful spaces has grown stronger but with an appreciation of real people and real living. In 2009 Bridget started Chirigos Designs, a full-scale interior decorating business in Houston, TX. Being a wife, a mom, running her business at home and living with a cat, a dog and a fish, Bridget knows the demands of real living and brings a unique perspective about stylish functionality. She also understands the constraints of a budget and believes that everyone can have a fabulously designed home that they can afford. 
   .content-container#page3
-    #page-1-content-bg
-    #page-1-content
+    .content-bg{:style => "height: 500px"}
+    .slideshow{:style => "height: 200px"}
+      %img{:alt => "", :src => "images/slideshow/service.jpg", :width => "800", :height => "200"}
+    .content{:style => "margin-top: 20px;"}
       %ul.submenu
-        %li.brown#sub-1-link
-          %a{:href => "#"} design
-        %li.red#sub-2-link 
-          %a{:href => "#"} material
-        %li.white#sub-3-link
-          %a{:href => "#"} the designer
-        %li.yellow#sub-4-link
-          %a{:href => "#"} more
-      .content-type-1#page1-sub1
+        %li.yellow#page3-sub1
+          %a{:href => "#"} consultations
+        %li.white#page3-sub2 
+          %a{:href => "#"} design Plans
+        %li.red#page3-sub3 
+          %a{:href => "#"} e-Decorating 
+      .content-type-1#page3-sub1-page
         .content-type-1-part-1
-          %h1 the Designs
-          %h2 Parts of corporate identity
-          %p Corporate identity has become an important tool for the promotion of corporate culture and companies. It is considered to be composed of the following parts:
-          %p Corporate design (logos, uniforms)
-          %p Corporate communications (advertisements, public relations, information, commercials)
-          %p Corporate behavior (internal values, norms)
-        .content-type-1-part-2
-          %br
-          %br
-          %br
-          %br
-          %p.note
-            %b corporate
-            identity 
-            %b blue 
-          | $1800
+          %h1 Design Consultations
+          %p Chirigos Designs provides in-home design consultations for simple projects like choosing color or window dressings; to full-scale design services. Tasks can/do include drawings, planning, shopping and site visits. 
+      .content-type-1#page3-sub2-page
+        .content-type-1-part-1
+          %h1 Design Plans
+          %p A Design Plan is given to the client with suggestions of specific colors, fabrics, materials, furniture and accessories necessary to complete the look. Complete with a Design Board, client will have all the shopping information and swatches necessary to implement the plan completely. 
+          %p Client is given an estimate of how much time it will take to complete the project and receive a weekly update to know the status of the project, number of hours of services rendered and budget analysis.
+      .content-type-1#page3-sub3-page
+        .content-type-1-part-1
+          %h1 e-Decorating 
+          %p e-Decorating is a perfect design option that gives virtual clients the opportunity to retain the services of Bridget Chirigos, even if they live outside of Houston or prefer a more affordable way to design their space. With e-Decorating you can achieve the look you want within your time, distance or budget.
+          %p All you do is fill out a design questionnaire and send it back along with photos and measurements of your space to be designed and we will provide you with all necessary information to implement the design.  For more details and to get started, go to our e-Decorating page. 
   .content-container#page4
     .content-text#page-4-content
   .content-container#page5

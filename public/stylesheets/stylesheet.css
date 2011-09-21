@@ -144,7 +144,6 @@ ul.menu a:hover {
   position: relative;
   margin: auto;
   margin-top: 175px;
-  background-image: url(/images/slideshow/2.jpg);
 }
 
 .content-container {
@@ -156,21 +155,21 @@ ul.menu a:hover {
   width: 1000px;
 }
 
-#page-1-content {
+.content {
   z-index: 100;
   position: relative;
-  margin-top: 50px;
+  margin-top: 20px;
   width: 960px;
   height: 400px;
 }
 
-#page-1-content-bg {
+.content-bg {
   z-index: -1;
   position: absolute;
   top: 150px;
   left: 75px;
   width: 850px;
-  height: 1000px;
+  height: 580px;
   background-image: url(/images/trans_black.png);
 }
 
@@ -182,30 +181,12 @@ ul.menu a:hover {
   height: 400px;
 }
 
-#page-2-content-bg {
-  z-index: -1;
-  position: absolute;
-  bottom: 50px;
-  width: 960px;
-  height: 500px;
-  background-image: url(/images/text_bg.png);
-}
-
 #page-3-content {
   z-index: 100;
   position: absolute;
   bottom: 50px;
   width: 960px;
   height: 400px;
-}
-
-#page-3-content-bg {
-  z-index: -1;
-  position: absolute;
-  bottom: 50px;
-  width: 960px;
-  height: 500px;
-  background-image: url(/images/text_bg.png);
 }
 
 #page-4-content {
@@ -258,7 +239,7 @@ ul.submenu {
   margin-left: 70px;
   display: block;
   height: 27px;
-  width: 950px;
+  width: 800px;
   list-style-type: none;
   color: white;
 }
@@ -281,20 +262,25 @@ ul.submenu li a {
 
 .content-type-1 {
   font-family: "Verdana";
-  width: 1000px;
+  width: 850px;
   height: 400px;
   margin-left: 95px;
+  position: absolute;
+  top: 50px;
+}
+
+img {
+  border: 5px solid white;
 }
 
 .content-type-1-part-1 {
-  float: left;
   width: 600px;
   border-right: 1px solid white;
 }
 
 .content-type-1-part-2 {
   float: left;
-  width: 398px;
+  width: 200px;
   height: 400px;
 }
 
