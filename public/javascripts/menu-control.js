@@ -1,6 +1,6 @@
 var whichPic = 1;
 var currentPage = "#page2"
-var currentSubPage = "#page2-sub1-page"
+var currentSubPage = "#page1-sub1-page"
 var bg_1_pic = "7.jpg"
 var bg_2_pic = "7.jpg"
 var agent=navigator.userAgent.toLowerCase();
@@ -45,7 +45,8 @@ $(document).ready(function() {
   );
 	//document.body.style.display = 'block';
 	$(".content-type-1").css("display","none")
-  $("#page2-sub1-page").css("display","block")
+	$(".content-container").css("display","none")
+  //$("#page2-sub1-page").css("display","block")
 	changePage("#page1")
 	$(".bg2").css("display", "none");
 	$("body").css("overflow-x", "hidden");
@@ -129,13 +130,13 @@ $(document).ready(function() {
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
-	$('#main-5-link').click(function(){
+	$('#main-5-link,#toPackage').click(function(){
 		changePage("#page5");
 		toggleSubPage($("#page5-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
-	$('#main-6-link').click(function(){
+	$('#main-6-link,#toContact').click(function(){
 		changePage("#page6");
 		toggleSubPage($("#page6-sub1"));
 		//switchBg("7.jpg");
@@ -146,10 +147,12 @@ $(document).ready(function() {
 });
 function toggleSubPage(input){
 	var target = "#"+ $(input).attr("id") + "-page"
+
 	if($(target).css("display") == "none"){
 		$(target).fadeToggle();
 		$(currentSubPage).fadeToggle();
 		currentSubPage = target
+		
 	}
 }
 function ipadFunc(){
