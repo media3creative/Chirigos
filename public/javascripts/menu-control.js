@@ -61,7 +61,7 @@ $(document).ready(function() {
 		//alert($(this).attr("id") != '#main-6-link');
 		if($(this).attr("id") != 'main-7-link'){
 				$(this).next().animate(
-					{"margin-top":"-80px","background-color":"black","opacity":"0.9"},
+					{"margin-top":"-120px","background-color":"black","opacity":"0.9"},
 					{duration: 250
 					,ease: "swing"
 					,queue: false}
