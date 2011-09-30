@@ -61,6 +61,7 @@ a {
 
 body {
   background-color: black;
+  font-family: Helvetica_light;
 }
 
 ul.menu {
@@ -271,7 +272,6 @@ ul.submenu li a {
 }
 
 .content-type-1 {
-  font-family: "Verdana";
   width: 850px;
   height: 400px;
   margin-left: 95px;
@@ -341,6 +341,17 @@ img {
 
 .normal-link:hover {
   color: black;
+}
+
+.next-btn {
+  background-color: #e1af57;
+  text-align: right;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.next-btn:hover {
+  background-color: white;
 }
 
 p {

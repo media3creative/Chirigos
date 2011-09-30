@@ -16,11 +16,11 @@ $(document).ready(function() {
 	);
   $('#slider').nivoSlider(
     {
-  						effect:'boxRainGrow', // Specify sets like: 'fold,fade,sliceDown'
+  						effect:'fade', // Specify sets like: 'fold,fade,sliceDown'
   		        slices:15, // For slice animations
   		        boxCols: 8, // For box animations
   		        boxRows: 6, // For box animations
-  		        animSpeed:200, // Slide transition speed
+  		        animSpeed:800, // Slide transition speed
   		        pauseTime:4000, // How long each slide will show
   		        startSlide:0, // Set starting Slide (0 index)
   		        directionNav:false, // Next & Prev navigation
@@ -130,9 +130,19 @@ $(document).ready(function() {
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
-	$('#main-5-link,#toPackage').click(function(){
+	$('#main-5-link').click(function(){
 		changePage("#page5");
 		toggleSubPage($("#page5-sub1"));
+		//switchBg("7.jpg");
+		// pageComeOut();
+	});
+	$('#to-package').click(function(){
+		toggleSubPage($("#page5-sub2"));
+		//switchBg("7.jpg");
+		// pageComeOut();
+	});
+	$('#to-question').click(function(){
+		toggleSubPage($("#page5-sub3"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
