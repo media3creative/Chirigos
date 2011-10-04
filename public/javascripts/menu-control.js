@@ -7,14 +7,14 @@ var agent=navigator.userAgent.toLowerCase();
 var is_iphone = ((agent.indexOf('iphone') != -1));
 var is_ipad = ((agent.indexOf('ipad') != -1));
 var is_safari = ((agent.indexOf('safari') != -1));
-
-$(document).ready(function() {
-  $('%ul.submenu li').click(
+jQuery.noConflict();
+jQuery(document).ready(function() {
+  jQuery('%ul.submenu li').click(
 	  function () {
 			toggleSubPage(this)
 	  }
 	);
-  $('#slider').nivoSlider(
+  jQuery('#slider').nivoSlider(
     {
   						effect:'fade', // Specify sets like: 'fold,fade,sliceDown'
   		        slices:15, // For slice animations
@@ -44,30 +44,30 @@ $(document).ready(function() {
   		}
   );
 	//document.body.style.display = 'block';
-	$(".content-type-1").css("display","none")
-	$(".content-container").css("display","none")
-  //$("#page2-sub1-page").css("display","block")
+	jQuery(".content-type-1").css("display","none")
+	jQuery(".content-container").css("display","none")
+  //jQuery("#page2-sub1-page").css("display","block")
 	changePage("#page1")
-	$(".bg2").css("display", "none");
-	$("body").css("overflow-x", "hidden");
+	jQuery(".bg2").css("display", "none");
+	jQuery("body").css("overflow-x", "hidden");
 	//=======ANIMATION FOR MAIN MENU===========
 	//====FIX SAFARI MARGIN PROBLEM============
 	if(is_safari){
-		$(".menu-hl").css("margin-left","-10px");
+		jQuery(".menu-hl").css("margin-left","-10px");
 	}
 	//=====MOUSE ENTER MENU ITEM==============
-	$('#main-1-link,#main-2-link,#main-3-link,#main-4-link,#main-5-link,#main-6-link').mouseenter(
+	jQuery('#main-1-link,#main-2-link,#main-3-link,#main-4-link,#main-5-link,#main-6-link').mouseenter(
 	  function () {
-		//alert($(this).attr("id") != '#main-6-link');
-		if($(this).attr("id") != 'main-7-link'){
-				$(this).next().animate(
+		//alert(jQuery(this).attr("id") != '#main-6-link');
+		if(jQuery(this).attr("id") != 'main-7-link'){
+				jQuery(this).next().animate(
 					{"margin-top":"-120px","background-color":"black","opacity":"0.9"},
 					{duration: 250
 					,ease: "swing"
 					,queue: false}
 				);
 			}else{
-					$(this).next().animate(
+					jQuery(this).next().animate(
 						{"margin-top":"-45px"},
 						{duration: 450
 						,ease: "swing"
@@ -77,9 +77,9 @@ $(document).ready(function() {
 	  }
 	);
 	//=====MOUSE LEAVE MENU ITEM==============
-	$('#main-1-link,#main-2-link,#main-3-link,#main-4-link,#main-5-link,#main-6-link').mouseleave(
+	jQuery('#main-1-link,#main-2-link,#main-3-link,#main-4-link,#main-5-link,#main-6-link').mouseleave(
 	  function () {
-				$(this).next().animate(
+				jQuery(this).next().animate(
 					{"margin-top":"-200px", "background-color":"white", "opacity":"0"},
 					{duration: 650
 					,ease: "linear"
@@ -88,9 +88,9 @@ $(document).ready(function() {
 	  }
 	);
 	//=====MOUSE ENTER MENU ITEM==============
-	$('%ul.submenu li').hover(
+	jQuery('%ul.submenu li').hover(
 	  function () {
-	    	$(this).animate(
+	    	jQuery(this).animate(
 							{"width":"300px"},
 							{duration: 250
 							,ease: "linear"
@@ -98,7 +98,7 @@ $(document).ready(function() {
 						);
 	  },
 	  function () {
-	    $(this).animate(
+	    jQuery(this).animate(
 							{"width":"150px"},
 							{duration: 250
 							,ease: "linear"
@@ -106,49 +106,54 @@ $(document).ready(function() {
 						);
 	  }
 	);
-	$('#main-1-link').click(function(){
+	jQuery('#main-1-link').click(function(){
 		changePage("#page1");
-		toggleSubPage($("#page1-sub1"));
+		toggleSubPage(jQuery("#page1-sub1"));
 		//switchBg("7.jpg");
 	});
 	
-	$('#main-2-link').click(function(){
+	jQuery('#main-2-link').click(function(){
 		changePage("#page2");
-		toggleSubPage($("#page2-sub1"));
+		toggleSubPage(jQuery("#page2-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
-	$('#main-3-link').click(function(){
+	jQuery('#main-3-link').click(function(){
 		changePage("#page3");
-		toggleSubPage($("#page3-sub1"));
+		toggleSubPage(jQuery("#page3-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
-	$('#main-4-link').click(function(){
+	jQuery('#main-4-link').click(function(){
 		changePage("#page4");
-		toggleSubPage($("#page4-sub1"));
+		toggleSubPage(jQuery("#page4-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
-	$('#main-5-link').click(function(){
+	jQuery('#main-5-link').click(function(){
 		changePage("#page5");
-		toggleSubPage($("#page5-sub1"));
+		toggleSubPage(jQuery("#page5-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
-	$('#to-package').click(function(){
-		toggleSubPage($("#page5-sub2"));
+	jQuery('#to-package').click(function(){
+		toggleSubPage(jQuery("#page5-sub2"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
-	$('#to-question').click(function(){
-		toggleSubPage($("#page5-sub3"));
+	jQuery('#to-question').click(function(){
+		toggleSubPage(jQuery("#page5-sub4"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
-	$('#main-6-link,#toContact').click(function(){
+	jQuery('#to-measure').click(function(){
+		toggleSubPage(jQuery("#page5-sub3"));
+		//switchBg("7.jpg");
+		// pageComeOut();
+	});
+	jQuery('#main-6-link,#toContact').click(function(){
 		changePage("#page6");
-		toggleSubPage($("#page6-sub1"));
+		toggleSubPage(jQuery("#page6-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
@@ -156,11 +161,11 @@ $(document).ready(function() {
 
 });
 function toggleSubPage(input){
-	var target = "#"+ $(input).attr("id") + "-page"
+	var target = "#"+ jQuery(input).attr("id") + "-page"
 
-	if($(target).css("display") == "none"){
-		$(target).fadeToggle();
-		$(currentSubPage).fadeToggle();
+	if(jQuery(target).css("display") == "none"){
+		jQuery(target).fadeToggle();
+		jQuery(currentSubPage).fadeToggle();
 		currentSubPage = target
 		
 	}
@@ -169,50 +174,50 @@ function ipadFunc(){
 	if(is_ipad
 		|| is_iphone){
 		//window.location.reload(true);
-		//alert(parseInt($("window").css("height")))
+		//alert(parseInt(jQuery("window").css("height")))
 		//alert(window.orientation)
-		if( parseInt($(".content-container").css("height")) > 600
+		if( parseInt(jQuery(".content-container").css("height")) > 600
 		&& (window.orientation == 90 ||  window.orientation == -90)
 		){
-			$(".bg1").css(
-				{"height": parseInt($(".content-container").css("height"))+ 150 +"px"}
+			jQuery(".bg1").css(
+				{"height": parseInt(jQuery(".content-container").css("height"))+ 150 +"px"}
 				);
-			$(".bg2").css(
-				{"height": parseInt($(".content-container").css("height"))+ 150 +"px"}
+			jQuery(".bg2").css(
+				{"height": parseInt(jQuery(".content-container").css("height"))+ 150 +"px"}
 				);
 		}else{
-				$(".bg1").css(
+				jQuery(".bg1").css(
 					{"height": "100%"}
 					);
-				$(".bg2").css(
+				jQuery(".bg2").css(
 					{"height": "100%"}
 					);
 		}
 	};
 }
-$(window).resize(function() {
- 	var middlePoint = (parseInt($("body").css("width"))/2) - (parseInt($(currentPage).css("width"))/2) + 30 + "px"
+jQuery(window).resize(function() {
+ 	var middlePoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(currentPage).css("width"))/2) + 30 + "px"
 	var inPoint = "0px"
 	//alert("tutu")
-	$(currentPage).css("left",middlePoint)
-	$(".content-container").css("height",$(".bod"))
+	jQuery(currentPage).css("left",middlePoint)
+	jQuery(".content-container").css("height",jQuery(".bod"))
 });
 
 //===============
 
 function changePage(targetPage){
-	var inPoint = (parseInt($("body").css("width"))/2) - (parseInt($(targetPage).css("width"))/2) + 30 + "px"
+	var inPoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(targetPage).css("width"))/2) + 30 + "px"
 	//var inPoint = "0px"
-	var outPoint2 =  (0 - parseInt($(targetPage).css("width"))) + "px"
-	var outPoint =  (parseInt($("body").css("width")) + parseInt($(targetPage).css("width"))) + "px"
+	var outPoint2 =  (0 - parseInt(jQuery(targetPage).css("width"))) + "px"
+	var outPoint =  (parseInt(jQuery("body").css("width")) + parseInt(jQuery(targetPage).css("width"))) + "px"
 	//alert(inPoint);
 	if(currentPage != targetPage){
-		$(targetPage).css("left",outPoint2)
-		$(targetPage).fadeIn(100).animate(
+		jQuery(targetPage).css("left",outPoint2)
+		jQuery(targetPage).fadeIn(100).animate(
 		{'left':inPoint},"slow","swing"
 		);
-		//$(currentPage).fadeOut();
-		$(currentPage).animate(
+		//jQuery(currentPage).fadeOut();
+		jQuery(currentPage).animate(
 		{'left':"2000px"},"slow","linear"
 		).fadeOut("fast");
 		currentPage = targetPage
@@ -238,17 +243,17 @@ function slideShow(){
 			whichPic = 0;
 		}
 	}
-	//$(".bg").delay("300").fadeIn();
+	//jQuery(".bg").delay("300").fadeIn();
 }
 function switchBg(whichBg){
 
-	$(".bg2").css("display","block");
-	$(".bg2").css("background-image","url(/images/bg/"+ bg_1_pic + ")");
-	$(".bg1").css("display","none");
-	$(".bg1").css("background-image","url(/images/bg/"+ whichBg + ")");
+	jQuery(".bg2").css("display","block");
+	jQuery(".bg2").css("background-image","url(/images/bg/"+ bg_1_pic + ")");
+	jQuery(".bg1").css("display","none");
+	jQuery(".bg1").css("background-image","url(/images/bg/"+ whichBg + ")");
 	
-	$(".bg2").fadeOut(1500);
-	$(".bg1").fadeIn(1500);
+	jQuery(".bg2").fadeOut(1500);
+	jQuery(".bg1").fadeIn(1500);
 	bg_2_pic = bg_1_pic;
 	bg_1_pic = whichBg;
 

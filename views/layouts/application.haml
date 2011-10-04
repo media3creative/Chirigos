@@ -8,12 +8,15 @@
     // Buggy on the iPhone4
     // %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}
     %link{:href => "stylesheets/stylesheet.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "stylesheets/lightbox.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "stylesheets/nivo-slider.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
     %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-1.5.min.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.nivo.slider.pack.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery.color.js"}
     %script{:type => "text/javascript", :src => "javascripts/menu-control.js"}
+    %script{:src => "javascripts/prototype.js", :type => "text/javascript"}
+    %script{:src => "javascripts/scriptaculous.js?load=effects,builder", :type => "text/javascript"}
+    %script{:src => "javascripts/lightbox.js", :type => "text/javascript"}
+    %link{:href => "stylesheets/lightbox.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
   %body{:onorientationchange =>"ipadFunc();"}
   .bg2
@@ -149,7 +152,9 @@
           %a{:href => "#"} getting started
         %li.white#page5-sub2 
           %a{:href => "#"} package
-        %li.red#page5-sub3 
+        %li.brown#page5-sub3 
+          %a{:href => "#"} measurement
+        %li.red#page5-sub4 
           %a{:href => "#"} questionnaire
       .content-type-1#page5-sub1-page
         .content-type-1-part-1
@@ -168,6 +173,10 @@
               %a.normal-link{:id => "toForm",:href => "#"} design questionnaire
             %li.normal-list 5. We will contact you within 24 hours and jump start your project!
           %h2 What do you receive?
+          %a{:href => "images/content_pic/design_board_1.jpg", :rel => "lightbox", :title => "Sample Design Board"}
+            %img{:alt => "", :src => "images/content_pic/design_board_1_small.jpg", :width => "256", :height => "250"}
+          %a{:href => "images/content_pic/design_board_2.jpg", :rel => "lightbox", :title => "Sample Design Board"}
+            %img{:alt => "", :src => "images/content_pic/design_board_2_small.jpg", :width => "256", :height => "250"}
           %p Depending on the scope of your project, your personalized Design Plan may include:
           %ul.normal-list
             %li.normal-list &diams; Design Board with pictures of items we have chosen for you
@@ -239,9 +248,40 @@
           %a.normal-link{:href => "#",:target =>"blank"}	 Purchase this package ($750)
           %br
           %br
+          .next-btn#to-measure 
+            Next step: Take the measurements >>
+      .content-type-1#page5-sub3-page
+        .content-type-1-part-1
+          %h1 How to take Measurements & Photos
+          %h2 For Silver Package - one design element
+          %a{:href => "images/content_pic/window_measurement.jpg", :rel => "lightbox", :title => "Sample Window Measurement"}
+            %img{:alt => "", :src => "images/content_pic/window_measurement.jpg", :width => "252", :height => "100"}
+          %ul.normal-list
+            %li.normal-list 1. Take a picture of your design element.	
+            %li.normal-list 2. Write out measurements of the width, height and length
+            %li.normal-list 3. Take 2-3 more pictures of your room showing your style, color and other elements.
+          %h2 For Gold & Diamond Packages
+          %a{:href => "images/content_pic/room_measurement.jpg", :rel => "lightbox", :title => "Sample Room Measurement"}
+            %img{:alt => "", :src => "images/content_pic/room_measurement.jpg", :width => "136", :height => "150"}
+          %a{:href => "images/content_pic/wall_measurement.jpg", :rel => "lightbox", :title => "Sample Wall Measurement"}
+            %img{:alt => "", :src => "images/content_pic/wall_measurement.jpg", :width => "239", :height => "150"}
+          %ul.normal-list
+            %li.normal-list 1. Draw a floor plan of your room from a bird's eye view showing the measurements of each wall in feet and inches and mark them North, South, East and West.
+            %li.normal-list 2. Draw each wall showing measurements from side to side and top to bottom. Draw doorway openings to other rooms, windows, light switches, vents, sconces or any other element that is significant. 
+            %li.normal-list 3. Take photos of all your walls in the room from side to side and floor to ceiling.
+            %li.normal-list 
+              4. Take photos of all the furniture that 
+              %b will be staying 
+              in the room and a picture of the entire room (or as much of it as you can) from the entry point.
+            %li.normal-list 5. Upload photos into the Design Questionnaire. (see tips on saving and uploading photos)
+          %h2 Tips on taking photos and uploading
+          %ul.normal-list
+            %li.normal-list 1. Take photos of all the walls in the room showing side to side and floor to ceiling.  
+            %li.normal-list 2. If you cannot get this all in one shot, take more than one picture of the wall.
+            %li.normal-list 3. Photo requirements to upload into Design Questionnaire are as follows
           .next-btn#to-question 
             Next step: Fill the Questionnaire >>
-      .content-type-1#page5-sub3-page
+      .content-type-1#page5-sub4-page
         .content-type-1-part-1
           %iframe{:allowtransparency => "true", :frameborder => "0", :height => "992", :scrolling => "no", :src => "https://media3creative.wufoo.com/embed/p7w7m3/", :style => "width:750px;border:none"}
 
