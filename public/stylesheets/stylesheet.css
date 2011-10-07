@@ -309,6 +309,10 @@ img {
   font-family: Helvetica_light;
   margin-left: -10px;
 }
+.normal-list li {
+  display: list-item;
+  list-style-type: disc;
+}
 
 .note {
   font-size: 13px;
