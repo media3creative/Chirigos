@@ -9,6 +9,7 @@ var is_ipad = ((agent.indexOf('ipad') != -1));
 var is_safari = ((agent.indexOf('safari') != -1));
 jQuery.noConflict();
 jQuery(document).ready(function() {
+  changePage("#page1");
   jQuery('%ul.submenu li').click(
 	  function () {
 			toggleSubPage(this)
@@ -45,9 +46,10 @@ jQuery(document).ready(function() {
   );
 	//document.body.style.display = 'block';
 	jQuery(".content-type-1").css("display","none")
-	jQuery(".content-container").css("display","none")
+	jQuery("#page2,#page3,#page4,#page5,#page6,#page7,#page8").css("display","none")
+	//jQuery("#page1").css("display","block")
   //jQuery("#page2-sub1-page").css("display","block")
-	changePage("#page1")
+	
 	jQuery(".bg2").css("display", "none");
 	jQuery("body").css("overflow-x", "hidden");
 	//=======ANIMATION FOR MAIN MENU===========
@@ -213,13 +215,13 @@ function changePage(targetPage){
 	//alert(inPoint);
 	if(currentPage != targetPage){
 		jQuery(targetPage).css("left",outPoint2)
-		jQuery(targetPage).fadeIn(100).animate(
+		jQuery(targetPage).css("display","block").animate(
 		{'left':inPoint},"slow","swing"
 		);
 		//jQuery(currentPage).fadeOut();
 		jQuery(currentPage).animate(
 		{'left':"2000px"},"slow","linear"
-		).fadeOut("fast");
+		).css("display","none")
 		currentPage = targetPage
 	};
 }
