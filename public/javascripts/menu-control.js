@@ -109,32 +109,32 @@ jQuery(document).ready(function() {
 	  }
 	);
 	jQuery('#main-1-link').click(function(){
-		changePage("#page1");
-		toggleSubPage(jQuery("#page1-sub1"));
+		changePage("#page1","#page1-sub1");
+		//toggleSubPage(jQuery("#page1-sub1"));
 		//switchBg("7.jpg");
 	});
 	
 	jQuery('#main-2-link').click(function(){
-		changePage("#page2");
-		toggleSubPage(jQuery("#page2-sub1"));
+		changePage("#page2","#page2-sub1");
+		//toggleSubPage(jQuery("#page2-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	jQuery('#main-3-link').click(function(){
-		changePage("#page3");
-		toggleSubPage(jQuery("#page3-sub1"));
+		changePage("#page3","#page3-sub1");
+		//toggleSubPage(jQuery("#page3-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	jQuery('#main-4-link').click(function(){
-		changePage("#page4");
-		toggleSubPage(jQuery("#page4-sub1"));
+		changePage("#page4","#page4-sub1");
+		//toggleSubPage(jQuery("#page4-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
 	jQuery('#main-5-link').click(function(){
-		changePage("#page5");
-		toggleSubPage(jQuery("#page5-sub1"));
+		changePage("#page5","#page5-sub1");
+		//toggleSubPage(jQuery("#page5-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
@@ -154,8 +154,8 @@ jQuery(document).ready(function() {
 		// pageComeOut();
 	});
 	jQuery('#main-6-link,#toContact').click(function(){
-		changePage("#page6");
-		toggleSubPage(jQuery("#page6-sub1"));
+		changePage("#page6","#page6-sub1");
+		//toggleSubPage(jQuery("#page6-sub1"));
 		//switchBg("7.jpg");
 		// pageComeOut();
 	});
@@ -164,8 +164,9 @@ jQuery(document).ready(function() {
 });
 function toggleSubPage(input){
 	var target = "#"+ jQuery(input).attr("id") + "-page"
-
-	if(jQuery(target).css("display") == "none"){
+  //alert(currentSubPage);
+	if(jQuery(target).css("display") == "none"
+	&& target != currentSubPage){
 		jQuery(target).fadeToggle();
 		jQuery(currentSubPage).fadeToggle();
 		currentSubPage = target
@@ -207,16 +208,20 @@ jQuery(window).resize(function() {
 
 //===============
 
-function changePage(targetPage){
+function changePage(targetPage,targetSubpage){
 	var inPoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(targetPage).css("width"))/2) + 30 + "px"
 	//var inPoint = "0px"
 	var outPoint2 =  (0 - parseInt(jQuery(targetPage).css("width"))) + "px"
 	var outPoint =  (parseInt(jQuery("body").css("width")) + parseInt(jQuery(targetPage).css("width"))) + "px"
 	//alert(inPoint);
 	if(currentPage != targetPage){
+	  jQuery(currentSubPage).css("display","none");
+	  currentSubPage = "#subpage0";
 		jQuery(targetPage).css("left",outPoint2)
 		jQuery(targetPage).css("display","block").animate(
-		{'left':inPoint},"slow","swing"
+		{'left':inPoint},"slow","swing",function(){
+		  toggleSubPage(jQuery(targetSubpage))
+		}
 		);
 		//jQuery(currentPage).fadeOut();
 		jQuery(currentPage).animate(
